@@ -33,7 +33,7 @@ app.get("/branch", db.getBranches);
 // retrieve branch details based on IFSC code
 app.get("/branch/:ifsc", verifyToken, db.getBranchDetails);
 
-// retrieve all bank branches based on IFSC code
+// retrieve all bank branches based on Bank Name, City, and Limit & Offset values for results
 app.get("/bank/:bank_name&:city&:limit&:offset", verifyToken, db.getBankDetails);
 
 // function for verifying jwt
