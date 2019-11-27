@@ -3,17 +3,17 @@ dotenv.config();
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
 const Pool = require("pg").Pool;
-const pool = new Pool({
-	user: 'postgres',
-	host: 'localhost',
-	database: 'fyle',
-	password: 'password',
-	port: 5432
-});
 // const pool = new Pool({
-// 	connectionString: process.env.DATABASE_URL,
-// 	ssl: true
-// })
+// 	user: 'postgres',
+// 	host: 'localhost',
+// 	database: 'fyle',
+// 	password: 'password',
+// 	port: 5432
+// });
+const pool = new Pool({
+	connectionString: process.env.DATABASE_URL,
+	ssl: true
+})
 
 const getBanks = (req, res) => {
 	pool.query(`SELECT * FROM banks`, (err, result) => {
