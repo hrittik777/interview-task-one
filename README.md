@@ -1,4 +1,4 @@
-# NodeJS and PostgreSQL app to for Bank Data
+# NodeJS and PostgreSQL App for Bank Data
 
 ## App fetches details regarding Banks and Branches from Database and serves requested data through respective API endpoints.
 
